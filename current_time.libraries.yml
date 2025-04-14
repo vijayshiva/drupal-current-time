@@ -1,0 +1,6 @@
+time_updater:
+  version: 1.x
+  js:
+    js/time-updater.js: {}
+  dependencies:
+    - core/jquery

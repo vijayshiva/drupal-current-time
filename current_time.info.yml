@@ -1,0 +1,5 @@
+name: Current Time
+type: module
+description: This module fetches the current time based on the site location
+core_version_requirement: ^9 || ^10
+package: Custom

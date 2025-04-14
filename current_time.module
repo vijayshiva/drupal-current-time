@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function current_time_theme($existing, $type, $theme, $path) {
+  return [
+    'current_time_template' => [
+    'variables' => ['test_var' => NULL, 'time' => NULL, 'country' => NULL, 'city' => NULL, ],
+
+    ],
+  ];
+}

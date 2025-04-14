@@ -1,0 +1,19 @@
+
+current_time.sitelocation_form:
+  path: '/admin/config/current_time/settings'
+  defaults:
+    _form: '\Drupal\current_time\Form\SiteLocation'
+    _title: 'SiteLocation'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE
+
+current_time.ajax_time:
+  path: '/ajax/current-time'
+  defaults:
+    _controller: '\Drupal\current_time\Controller\CurrentTimeController::getTime'
+    _format: 'json'
+  requirements:
+    _access: 'TRUE'
+
