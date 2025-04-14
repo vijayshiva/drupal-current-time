@@ -29,13 +29,14 @@ class TaksBlock extends BlockBase {
           'current_time/time_updater',
         ],
       ],
+      '#cache' => [
+        'max-age' => 60,
+        'contexts' => ['user', 'timezone:' . $timeDetails['timezone']],
+        'tags' => ['current_time_location'],
+      ],
     ];
 
     return $renderable;
-  }
-
-  public function getCacheMaxAge() {
-    return Cache::PERMANENT;
   }
 
 }

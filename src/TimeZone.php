@@ -34,6 +34,11 @@ class Timezone {
       'time' => $this->date_format->format($timestamp, 'custom', 'g:i a', $timezone),
       'full_date' => $this->date_format->format($timestamp, 'custom', 'l, j F Y', $timezone),
       'location' => "Time in {$city}, {$country}",
+	  '#cache' => [
+        'max-age' => 60,
+        'contexts' => ['user', 'timezone:' . $timezone],
+        'tags' => ['current_time:' . $city . ':' . $country],
+      ],
     ];
   }
 }
